@@ -1,21 +1,23 @@
-import React from 'react';
-import posed, { PoseGroup } from 'react-pose';
+import React from "react";
+import posed, { PoseGroup } from "react-pose";
 
-import Layout from './Layout';
-import { defaultPose } from './poses';
+import Layout from "./Layout";
+import { DefaultPose } from "./poses";
 
 export const WrapPageElement = ({ element, props }) => {
   const { key } = props.location;
-  const { pose } = element.props;
+  const { pose, transitionComponent } = element.props;
 
-  const Pose = posed.div(pose || defaultPose);
+  const Pose = pose ? posed.div(pose) : DefaultPose;
+
+  const UsedTransition = transitionComponent || Pose;
 
   return (
     <Layout>
       <PoseGroup>
-        <Pose key={key} {...props}>
+        <UsedTransition key={key} {...props}>
           {element}
-        </Pose>
+        </UsedTransition>
       </PoseGroup>
     </Layout>
   );

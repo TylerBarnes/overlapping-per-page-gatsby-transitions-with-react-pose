@@ -1,17 +1,17 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import posed, { PoseGroup } from 'react-pose';
+import React from "react";
+import { Link } from "gatsby";
+import posed, { PoseGroup } from "react-pose";
 
-import { fromLeft } from '../components/poses';
+import { CatTransition } from "../components/poses";
 
 const LinkContainer = posed.div({
   enter: {
-    x: '100%',
+    x: "100%",
     delay: 0,
     beforeChildren: 300,
     transition: { duration: 3000 }
   },
-  exit: { x: '0%', transition: { duration: 1000 } }
+  exit: { x: "0%", transition: { duration: 1000 } }
 });
 
 class Cat extends React.Component {
@@ -36,7 +36,7 @@ class Cat extends React.Component {
 }
 
 Cat.defaultProps = {
-  pose: fromLeft
+  transitionComponent: CatTransition
 };
 
 export default Cat;

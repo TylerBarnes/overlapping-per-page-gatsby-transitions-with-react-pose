@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { fromRight } from '../components/poses';
+import React from "react";
+import { Link } from "gatsby";
+import { FromRight } from "../components/poses";
 
 const Index = () => (
   <div>
@@ -18,7 +18,7 @@ const Index = () => (
 );
 
 Index.defaultProps = {
-  pose: fromRight
+  transitionComponent: FromRight
 };
 
 export default Index;
