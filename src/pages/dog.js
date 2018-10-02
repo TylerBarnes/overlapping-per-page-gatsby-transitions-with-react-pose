@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
+import { FromTop } from '../components/poses';
 
 const Dog = () => (
   <div>
@@ -15,5 +16,9 @@ const Dog = () => (
     </div>
   </div>
 );
+
+Dog.defaultProps = {
+  transitionComponent: FromTop
+};
 
 export default Dog;
