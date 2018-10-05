@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { FromTop } from '../components/poses';
+import React from "react";
+import { Link } from "gatsby";
+import { FromLeft } from "../components/poses";
+import addTransition from "../components/addTransition";
 
 const Dog = () => (
   <div>
@@ -17,8 +18,6 @@ const Dog = () => (
   </div>
 );
 
-Dog.defaultProps = {
-  transitionComponent: FromTop
-};
+addTransition(Dog, FromLeft);
 
 export default Dog;

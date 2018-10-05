@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { FromRight } from "../components/poses";
+import addTransition from "../components/addTransition";
 
 const Index = () => (
   <div>
@@ -17,8 +18,6 @@ const Index = () => (
   </div>
 );
 
-Index.defaultProps = {
-  transitionComponent: FromRight
-};
+addTransition(Index, FromRight);
 
 export default Index;

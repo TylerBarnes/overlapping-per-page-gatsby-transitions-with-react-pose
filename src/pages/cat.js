@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import posed, { PoseGroup } from "react-pose";
 
 import { CatTransition } from "../components/poses";
+import addTransition from "../components/addTransition";
 
 const LinkContainer = posed.div({
   enter: {
@@ -35,8 +36,6 @@ class Cat extends React.Component {
   }
 }
 
-Cat.defaultProps = {
-  transitionComponent: CatTransition
-};
+addTransition(Cat, CatTransition);
 
 export default Cat;
