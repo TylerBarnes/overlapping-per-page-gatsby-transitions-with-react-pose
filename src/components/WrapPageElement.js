@@ -15,7 +15,7 @@ export const WrapPageElement = ({ element, props }) => {
     "/": FromRight,
   }
 
-  const Pose = routeToTransition[pathname]
+  const Pose = routeToTransition[pathname] || DefaultPose;
 
   const UsedTransition = Pose;
  
